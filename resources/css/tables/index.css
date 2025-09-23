@@ -1,0 +1,51 @@
+@import './pagination.css';
+/* ===== TABLES GLASSMORPHISM COMPONENTS ===== */
+
+/* Tables with Glass Effects */
+.fi-ta-ctn {
+    @apply border border-white/20 rounded-xl overflow-hidden transition-all duration-300 ease-in-out bg-white/15 shadow;
+}
+
+.fi-ta-ctn:hover {
+    @apply bg-white/20 shadow-2xl;
+}
+
+.fi-ta-content {
+    @apply bg-white/15 shadow;
+
+}
+
+
+/* Table Rows */
+.fi-ta-row,
+.fi-ta-record {
+    @apply transition-all duration-200 ease-in-out bg-white/10 dark:bg-gray-700/10 border-b border-b-white/20 dark:border-b-gray-700/20;
+}
+
+.fi-ta-row:not(.fi-ta-summary-header-row):hover,
+.fi-ta-row:not(.fi-ta-summary-row):hover,
+.fi-ta-record:hover {
+    @apply bg-white/50 dark:bg-gray-800/30;
+}
+
+
+
+/* Selected Rows */
+.fi-ta-row.fi-selected,
+.fi-ta-record.fi-selected {
+    @apply bg-primary-100 dark:bg-primary-100/20 border-none;
+}
+
+.fi-ta-row.fi-selected:hover,
+.fi-ta-record.fi-selected:hover {
+    @apply bg-primary-100 dark:bg-primary-100/10;
+}
+
+.fi-ta-summary-header-row {
+    @apply bg-white/60 dark:bg-gray-400/60;
+
+}
+
+.fi-ta-summary-row {
+    @apply bg-white/20 dark:bg-gray-400/20;
+}

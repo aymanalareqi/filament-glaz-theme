@@ -1,0 +1,7 @@
+@import '../../../../../vendor/filament/filament/resources/css/theme.css';
+
+@import './panel/index.css';
+@import './actions/index.css';
+@import './widgets/index.css';
+@import './form/index.css';
+@import './tables/index.css';

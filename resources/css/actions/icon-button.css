@@ -1,0 +1,6 @@
+.fi-icon-btn {
+    .fi-icon {
+        @apply hover:dark:text-gray-100;
+    }
+
+}

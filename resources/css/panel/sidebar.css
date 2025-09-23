@@ -1,0 +1,55 @@
+/* Enhanced Sidebar */
+.fi-sidebar-close-overlay {
+    @apply backdrop-blur-xs bg-white/5;
+
+}
+
+.fi-sidebar {
+    @apply backdrop-blur-lg border-r lg:bg-white/20 bg-white/20 dark:bg-gray-800/70 dark:lg:bg-gray-600/60 border-r-white/20 shadow-2xl;
+
+
+}
+
+.fi-sidebar-header {
+    @apply backdrop-blur-2xl border-b border-white/20 relative z-10 transition-all duration-300 ease-in-out bg-white/10 shadow-xl;
+}
+
+/* Sidebar Navigation Items */
+.fi-sidebar-item {
+    .fi-sidebar-item-btn {
+        @apply bg-transparent;
+    }
+}
+
+.fi-sidebar-item:hover a,
+.fi-sidebar-item.fi-active a {
+    @apply bg-gradient-to-l from-white to-white/10 dark:from-gray-700 dark:to-gray-600/0;
+}
+
+.fi-sidebar-item-icon {
+    @apply dark:text-gray-300;
+}
+
+.fi-sidebar-item.fi-active {}
+
+/* Sidebar Navigation Links */
+.fi-sidebar-nav-item a {
+    @apply transition-all duration-200 ease-in-out rounded-md px-3 py-2 flex items-center;
+}
+
+.fi-sidebar-nav-item a:hover {
+    @apply scale-102;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Sidebar Group Headers */
+
+/* Sidebar Icons */
+.fi-sidebar-item-icon {
+    @apply transition-all duration-200 ease-in-out;
+}
+
+.fi-sidebar-nav-item:hover .fi-sidebar-item-icon {
+    @apply scale-110;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}

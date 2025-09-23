@@ -1,0 +1,31 @@
+/* Stats Overview Cards */
+.fi-wi-stats-overview-stat {
+    @apply backdrop-blur-md border rounded-xl relative overflow-hidden transition-all duration-300 ease-in-out bg-white/5 border-white/30 shadow;
+}
+
+.fi-wi-stats-overview-stat:hover {
+    @apply bg-white/10 shadow-xl;
+}
+
+/* Stats Value */
+.fi-wi-stats-overview-stat-value {
+    @apply dark:text-gray-50;
+}
+
+.fi-wi-stats-overview-stat:hover .fi-wi-stats-overview-stat-value {
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Stats Label */
+.fi-wi-stats-overview-stat-label {
+    @apply dark:text-gray-200;
+}
+
+/* Stats Icon */
+.fi-wi-stats-overview-stat-icon {}
+
+.fi-wi-stats-overview-stat:hover .fi-wi-stats-overview-stat-icon {}
+
+.fi-wi-stats-overview-stat-chart-bg-color {
+    @apply bg-primary-500;
+}

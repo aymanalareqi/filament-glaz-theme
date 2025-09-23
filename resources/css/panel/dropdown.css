@@ -1,0 +1,3 @@
+.fi-dropdown-panel {
+    @apply backdrop-blur-sm bg-white/10 dark:bg-gray-600/30 rounded-xl shadow-xl;
+}

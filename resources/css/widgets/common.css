@@ -1,0 +1,185 @@
+/* ===== WIDGETS GLASSMORPHISM COMPONENTS ===== */
+
+/* Widgets with Floating Animation */
+.fi-wi {
+    @apply backdrop-blur-xl border rounded-xl relative overflow-hidden transition-all duration-300 ease-in-out;
+    background: rgba(255, 255, 255, 0.5);
+    border-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    animation: widgetFloat 8s ease-in-out infinite;
+    -webkit-backdrop-filter: blur(20px);
+}
+
+.fi-wi::before {
+    @apply absolute w-full h-full pointer-events-none;
+    content: '';
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    /* Complex radial gradient kept as custom CSS - no direct Tailwind equivalent */
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    animation: widgetShimmer 4s ease-in-out infinite;
+}
+
+.fi-wi:hover {
+    @apply -translate-y-2 scale-102;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 16px 64px rgba(0, 0, 0, 0.15);
+    animation-play-state: paused;
+}
+
+@keyframes widgetFloat {
+
+    0%,
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+
+    25% {
+        transform: translateY(-5px) rotate(0.5deg);
+    }
+
+    50% {
+        transform: translateY(-10px) rotate(0deg);
+    }
+
+    75% {
+        transform: translateY(-5px) rotate(-0.5deg);
+    }
+}
+
+@keyframes widgetShimmer {
+
+    0%,
+    100% {
+        transform: translateX(-100%) translateY(-100%) rotate(45deg);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translateX(100%) translateY(100%) rotate(45deg);
+        opacity: 1;
+    }
+}
+
+
+/* Widget Headers */
+.fi-wi-header {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 16px 20px;
+    transition: all 0.2s ease;
+}
+
+.fi-wi-header:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.fi-wi-header-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.fi-wi-header-actions {
+    display: flex;
+    gap: 8px;
+    opacity: 0;
+    transition: all 0.2s ease;
+}
+
+.fi-wi:hover .fi-wi-header-actions {
+    opacity: 1;
+    transform: translateX(-4px);
+}
+
+/* Widget Content */
+.fi-wi-content {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.02);
+    transition: all 0.2s ease;
+}
+
+/* Widget Footers */
+.fi-wi-footer {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 12px 20px;
+    transition: all 0.2s ease;
+}
+
+/* Progress Widgets */
+.fi-wi-progress {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 8px;
+    height: 8px;
+    overflow: hidden;
+    position: relative;
+}
+
+.fi-wi-progress-bar {
+    background: linear-gradient(90deg, rgba(59, 130, 246, 0.8), rgba(147, 51, 234, 0.8));
+    height: 100%;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.fi-wi-progress-bar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    animation: progressShine 2s ease-in-out infinite;
+}
+
+@keyframes progressShine {
+    0% {
+        left: -100%;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+/* Widget Loading States */
+.fi-wi-loading {
+    position: relative;
+    overflow: hidden;
+}
+
+.fi-wi-loading::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    animation: widgetLoading 1.5s ease-in-out infinite;
+}
+
+@keyframes widgetLoading {
+    0% {
+        left: -100%;
+    }
+
+    100% {
+        left: 100%;
+    }
+}

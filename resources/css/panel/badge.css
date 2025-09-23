@@ -1,0 +1,11 @@
+.fi-badge {
+    @apply backdrop-blur-sm bg-white/90 dark:bg-gray-600 ring-1 dark:ring-gray-500 dark:border-none shadow transition-all duration-200 ease-in-out;
+}
+
+.fi-badge:hover {
+    @apply bg-white dark:bg-gray-500 scale-105 shadow-md;
+}
+
+.fi-icon-btn-badge-ctn {
+    @apply bg-transparent;
+}

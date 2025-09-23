@@ -1,0 +1,318 @@
+/* ===== ENHANCED GLASSMORPHISM BUTTONS WITH GRADIENTS ===== */
+
+/* Base Button with Gradient Glass Effect */
+.fi-btn {
+    @apply backdrop-blur-md rounded-lg relative overflow-hidden transition-all duration-300 ease-in-out bg-white/50 dark:bg-gray-600/50 border-none dark:ring-1 dark:ring-gray-500;
+}
+
+/* Shimmer Effect for All Buttons */
+.fi-btn::before {
+    @apply absolute inset-0 opacity-0 transition-all duration-500 ease-in-out;
+    content: '';
+    background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.3) 50%, transparent 70%);
+    transform: translateX(-100%) translateY(-100%) rotate(45deg);
+}
+
+.fi-btn:hover::before {
+    @apply opacity-100;
+    transform: translateX(100%) translateY(100%) rotate(45deg);
+}
+
+/* Base Button Hover State */
+.fi-btn:hover {
+    @apply -translate-y-0.5 scale-102 shadow-xl;
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.fi-btn:active {
+    @apply translate-y-0 scale-98 shadow-xl;
+}
+
+/* Primary Button with Blue Gradient */
+.fi-btn.fi-color-primary {
+    @apply text-white border-0;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.9), rgba(37, 99, 235, 0.8));
+    box-shadow: 0 4px 16px rgba(59, 130, 246, 0.3), inset 0 1px 0 rgba(147, 197, 253, 0.3);
+}
+
+.fi-btn.fi-color-primary:hover {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 1), rgba(37, 99, 235, 0.9));
+    box-shadow: 0 8px 32px rgba(59, 130, 246, 0.4), inset 0 1px 0 rgba(147, 197, 253, 0.4);
+}
+
+.fi-btn.fi-color-primary:active {
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.9), rgba(29, 78, 216, 0.8));
+    box-shadow: 0 2px 8px rgba(59, 130, 246, 0.2), inset 0 1px 0 rgba(147, 197, 253, 0.2);
+}
+
+/* Secondary Button with Gray Gradient */
+.fi-btn.fi-color-secondary {
+    @apply text-white border-0;
+    box-shadow: 0 4px 16px rgba(107, 114, 128, 0.2), inset 0 1px 0 rgba(156, 163, 175, 0.3);
+}
+
+.fi-btn.fi-color-secondary:hover {
+    background: linear-gradient(135deg, rgba(107, 114, 128, 0.9), rgba(75, 85, 99, 0.8));
+    box-shadow: 0 8px 32px rgba(107, 114, 128, 0.3), inset 0 1px 0 rgba(156, 163, 175, 0.4);
+}
+
+.fi-btn.fi-color-secondary:active {
+    background: linear-gradient(135deg, rgba(75, 85, 99, 0.8), rgba(55, 65, 81, 0.7));
+    box-shadow: 0 2px 8px rgba(107, 114, 128, 0.15), inset 0 1px 0 rgba(156, 163, 175, 0.2);
+}
+
+/* Success Button with Green Gradient */
+.fi-btn.fi-color-success {
+    @apply text-white border-0;
+    background: linear-gradient(135deg, rgba(34, 197, 94, 0.9), rgba(22, 163, 74, 0.8));
+    box-shadow: 0 4px 16px rgba(34, 197, 94, 0.3), inset 0 1px 0 rgba(134, 239, 172, 0.3);
+}
+
+.fi-btn.fi-color-success:hover {
+    background: linear-gradient(135deg, rgba(34, 197, 94, 1), rgba(22, 163, 74, 0.9));
+    box-shadow: 0 8px 32px rgba(34, 197, 94, 0.4), inset 0 1px 0 rgba(134, 239, 172, 0.4);
+}
+
+.fi-btn.fi-color-success:active {
+    background: linear-gradient(135deg, rgba(22, 163, 74, 0.9), rgba(21, 128, 61, 0.8));
+    box-shadow: 0 2px 8px rgba(34, 197, 94, 0.2), inset 0 1px 0 rgba(134, 239, 172, 0.2);
+}
+
+/* Danger Button with Red Gradient */
+.fi-btn.fi-color-danger {
+    @apply text-white border-0;
+    background: linear-gradient(135deg, rgba(239, 68, 68, 0.9), rgba(220, 38, 38, 0.8));
+    box-shadow: 0 4px 16px rgba(239, 68, 68, 0.3), inset 0 1px 0 rgba(252, 165, 165, 0.3);
+}
+
+.fi-btn.fi-color-danger:hover {
+    background: linear-gradient(135deg, rgba(239, 68, 68, 1), rgba(220, 38, 38, 0.9));
+    box-shadow: 0 8px 32px rgba(239, 68, 68, 0.4), inset 0 1px 0 rgba(252, 165, 165, 0.4);
+}
+
+.fi-btn.fi-color-danger:active {
+    background: linear-gradient(135deg, rgba(220, 38, 38, 0.9), rgba(185, 28, 28, 0.8));
+    box-shadow: 0 2px 8px rgba(239, 68, 68, 0.2), inset 0 1px 0 rgba(252, 165, 165, 0.2);
+}
+
+/* Warning Button with Orange Gradient */
+.fi-btn.fi-color-warning {
+    @apply text-white border-0;
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.9), rgba(217, 119, 6, 0.8));
+    box-shadow: 0 4px 16px rgba(245, 158, 11, 0.3), inset 0 1px 0 rgba(253, 230, 138, 0.3);
+}
+
+.fi-btn.fi-color-warning:hover {
+    background: linear-gradient(135deg, rgba(245, 158, 11, 1), rgba(217, 119, 6, 0.9));
+    box-shadow: 0 8px 32px rgba(245, 158, 11, 0.4), inset 0 1px 0 rgba(253, 230, 138, 0.4);
+}
+
+.fi-btn.fi-color-warning:active {
+    background: linear-gradient(135deg, rgba(217, 119, 6, 0.9), rgba(180, 83, 9, 0.8));
+    box-shadow: 0 2px 8px rgba(245, 158, 11, 0.2), inset 0 1px 0 rgba(253, 230, 138, 0.2);
+}
+
+/* Info Button with Cyan Gradient */
+.fi-btn.fi-color-info {
+    @apply text-white border-0;
+    background: linear-gradient(135deg, rgba(6, 182, 212, 0.9), rgba(8, 145, 178, 0.8));
+    box-shadow: 0 4px 16px rgba(6, 182, 212, 0.3), inset 0 1px 0 rgba(165, 243, 252, 0.3);
+}
+
+.fi-btn.fi-color-info:hover {
+    background: linear-gradient(135deg, rgba(6, 182, 212, 1), rgba(8, 145, 178, 0.9));
+    box-shadow: 0 8px 32px rgba(6, 182, 212, 0.4), inset 0 1px 0 rgba(165, 243, 252, 0.4);
+}
+
+.fi-btn.fi-color-info:active {
+    background: linear-gradient(135deg, rgba(8, 145, 178, 0.9), rgba(14, 116, 144, 0.8));
+    box-shadow: 0 2px 8px rgba(6, 182, 212, 0.2), inset 0 1px 0 rgba(165, 243, 252, 0.2);
+}
+
+/* ===== TOGGLE BUTTONS WITH GRADIENT BACKGROUNDS ===== */
+
+.fi-fo-toggle-buttons-btn-ctn {
+
+    /* Base Toggle Button - White Background by Default */
+    .fi-btn {
+        @apply bg-white text-gray-700 border border-gray-200 shadow-sm transition-all duration-200 ease-in-out;
+        background: rgba(255, 255, 255, 0.95);
+        border-color: rgba(0, 0, 0, 0.1);
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    }
+
+    .fi-btn:hover {
+        @apply bg-gray-50 border-gray-300;
+        background: rgba(248, 250, 252, 0.95);
+        border-color: rgba(0, 0, 0, 0.15);
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    }
+
+    /* Primary Color Toggle Button */
+    .fi-btn.fi-color-primary {
+        @apply text-primary-600 bg-white border-primary-200;
+        background: rgba(255, 255, 255, 0.95);
+        border-color: rgba(59, 130, 246, 0.2);
+    }
+
+    .fi-btn.fi-color-primary:hover {
+        @apply text-primary-700 bg-primary-50 border-primary-300;
+        background: rgba(239, 246, 255, 0.95);
+        border-color: rgba(59, 130, 246, 0.3);
+    }
+
+    /* Checked State - Primary with Gradient */
+    .fi-btn.fi-color-primary[aria-pressed="true"],
+    .fi-btn.fi-color-primary.fi-active {
+        @apply text-white border-0;
+        background: linear-gradient(135deg, rgba(59, 130, 246, 0.95), rgba(37, 99, 235, 0.9));
+        border-color: rgba(59, 130, 246, 1);
+        box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3), inset 0 1px 0 rgba(147, 197, 253, 0.3);
+    }
+
+    .fi-btn.fi-color-primary[aria-pressed="true"]:hover,
+    .fi-btn.fi-color-primary.fi-active:hover {
+        background: linear-gradient(135deg, rgba(59, 130, 246, 1), rgba(37, 99, 235, 0.95));
+        box-shadow: 0 6px 16px rgba(59, 130, 246, 0.4), inset 0 1px 0 rgba(147, 197, 253, 0.4);
+    }
+
+    /* Secondary Color Toggle Button */
+    .fi-btn.fi-color-secondary {
+        @apply text-gray-600 bg-white border-gray-200;
+        background: rgba(255, 255, 255, 0.95);
+        border-color: rgba(107, 114, 128, 0.2);
+    }
+
+    .fi-btn.fi-color-secondary:hover {
+        @apply text-gray-700 bg-gray-50 border-gray-300;
+        background: rgba(249, 250, 251, 0.95);
+        border-color: rgba(107, 114, 128, 0.3);
+    }
+
+    /* Checked State - Secondary with Gradient */
+    .fi-btn.fi-color-secondary[aria-pressed="true"],
+    .fi-btn.fi-color-secondary.fi-active {
+        @apply text-white border-0;
+        background: linear-gradient(135deg, rgba(107, 114, 128, 0.95), rgba(75, 85, 99, 0.9));
+        border-color: rgba(107, 114, 128, 1);
+        box-shadow: 0 4px 12px rgba(107, 114, 128, 0.3), inset 0 1px 0 rgba(156, 163, 175, 0.3);
+    }
+
+    .fi-btn.fi-color-secondary[aria-pressed="true"]:hover,
+    .fi-btn.fi-color-secondary.fi-active:hover {
+        background: linear-gradient(135deg, rgba(107, 114, 128, 1), rgba(75, 85, 99, 0.95));
+        box-shadow: 0 6px 16px rgba(107, 114, 128, 0.4), inset 0 1px 0 rgba(156, 163, 175, 0.4);
+    }
+
+    /* Success Color Toggle Button */
+    .fi-btn.fi-color-success {
+        @apply text-success-600 bg-white border-success-200;
+        background: rgba(255, 255, 255, 0.95);
+        border-color: rgba(34, 197, 94, 0.2);
+    }
+
+    .fi-btn.fi-color-success:hover {
+        @apply text-success-700 bg-success-50 border-success-300;
+        background: rgba(240, 253, 244, 0.95);
+        border-color: rgba(34, 197, 94, 0.3);
+    }
+
+    /* Checked State - Success with Gradient */
+    .fi-btn.fi-color-success[aria-pressed="true"],
+    .fi-btn.fi-color-success.fi-active {
+        @apply text-white border-0;
+        background: linear-gradient(135deg, rgba(34, 197, 94, 0.95), rgba(22, 163, 74, 0.9));
+        border-color: rgba(34, 197, 94, 1);
+        box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3), inset 0 1px 0 rgba(134, 239, 172, 0.3);
+    }
+
+    .fi-btn.fi-color-success[aria-pressed="true"]:hover,
+    .fi-btn.fi-color-success.fi-active:hover {
+        background: linear-gradient(135deg, rgba(34, 197, 94, 1), rgba(22, 163, 74, 0.95));
+        box-shadow: 0 6px 16px rgba(34, 197, 94, 0.4), inset 0 1px 0 rgba(134, 239, 172, 0.4);
+    }
+
+    /* Danger Color Toggle Button */
+    .fi-btn.fi-color-danger {
+        @apply text-danger-600 bg-white border-danger-200;
+        background: rgba(255, 255, 255, 0.95);
+        border-color: rgba(239, 68, 68, 0.2);
+    }
+
+    .fi-btn.fi-color-danger:hover {
+        @apply text-danger-700 bg-danger-50 border-danger-300;
+        background: rgba(254, 242, 242, 0.95);
+        border-color: rgba(239, 68, 68, 0.3);
+    }
+
+    /* Checked State - Danger with Gradient */
+    .fi-btn.fi-color-danger[aria-pressed="true"],
+    .fi-btn.fi-color-danger.fi-active {
+        @apply text-white border-0;
+        background: linear-gradient(135deg, rgba(239, 68, 68, 0.95), rgba(220, 38, 38, 0.9));
+        border-color: rgba(239, 68, 68, 1);
+        box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3), inset 0 1px 0 rgba(252, 165, 165, 0.3);
+    }
+
+    .fi-btn.fi-color-danger[aria-pressed="true"]:hover,
+    .fi-btn.fi-color-danger.fi-active:hover {
+        background: linear-gradient(135deg, rgba(239, 68, 68, 1), rgba(220, 38, 38, 0.95));
+        box-shadow: 0 6px 16px rgba(239, 68, 68, 0.4), inset 0 1px 0 rgba(252, 165, 165, 0.4);
+    }
+
+    /* Warning Color Toggle Button */
+    .fi-btn.fi-color-warning {
+        @apply text-warning-600 bg-white border-warning-200;
+        background: rgba(255, 255, 255, 0.95);
+        border-color: rgba(245, 158, 11, 0.2);
+    }
+
+    .fi-btn.fi-color-warning:hover {
+        @apply text-warning-700 bg-warning-50 border-warning-300;
+        background: rgba(255, 251, 235, 0.95);
+        border-color: rgba(245, 158, 11, 0.3);
+    }
+
+    /* Checked State - Warning with Gradient */
+    .fi-btn.fi-color-warning[aria-pressed="true"],
+    .fi-btn.fi-color-warning.fi-active {
+        @apply text-white border-0;
+        background: linear-gradient(135deg, rgba(245, 158, 11, 0.95), rgba(217, 119, 6, 0.9));
+        border-color: rgba(245, 158, 11, 1);
+        box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3), inset 0 1px 0 rgba(253, 230, 138, 0.3);
+    }
+
+    .fi-btn.fi-color-warning[aria-pressed="true"]:hover,
+    .fi-btn.fi-color-warning.fi-active:hover {
+        background: linear-gradient(135deg, rgba(245, 158, 11, 1), rgba(217, 119, 6, 0.95));
+        box-shadow: 0 6px 16px rgba(245, 158, 11, 0.4), inset 0 1px 0 rgba(253, 230, 138, 0.4);
+    }
+
+    /* Info Color Toggle Button */
+    .fi-btn.fi-color-info {
+        @apply text-info-600 bg-white border-info-200;
+        background: rgba(255, 255, 255, 0.95);
+        border-color: rgba(6, 182, 212, 0.2);
+    }
+
+    .fi-btn.fi-color-info:hover {
+        @apply text-info-700 bg-info-50 border-info-300;
+        background: rgba(236, 254, 255, 0.95);
+        border-color: rgba(6, 182, 212, 0.3);
+    }
+
+    /* Checked State - Info with Gradient */
+    .fi-btn.fi-color-info[aria-pressed="true"],
+    .fi-btn.fi-color-info.fi-active {
+        @apply text-white border-0;
+        background: linear-gradient(135deg, rgba(6, 182, 212, 0.95), rgba(8, 145, 178, 0.9));
+        border-color: rgba(6, 182, 212, 1);
+        box-shadow: 0 4px 12px rgba(6, 182, 212, 0.3), inset 0 1px 0 rgba(165, 243, 252, 0.3);
+    }
+
+    .fi-btn.fi-color-info[aria-pressed="true"]:hover,
+    .fi-btn.fi-color-info.fi-active:hover {
+        background: linear-gradient(135deg, rgba(6, 182, 212, 1), rgba(8, 145, 178, 0.95));
+        box-shadow: 0 6px 16px rgba(6, 182, 212, 0.4), inset 0 1px 0 rgba(165, 243, 252, 0.4);
+    }
+}

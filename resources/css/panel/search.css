@@ -1,0 +1,23 @@
+/* Search Results Container */
+
+
+.fi-global-search-results-ctn {
+    @apply bg-white/50 dark:bg-gray-800/70;
+}
+
+.fi-global-search-results {
+    @apply relative;
+}
+
+.fi-global-search-results::before {
+    @apply absolute inset-0 backdrop-blur-sm -z-1;
+    content: '';
+}
+
+
+
+
+
+.fi-global-search-result-group-header {
+    @apply bg-white/50 dark:bg-gray-900/30 backdrop-blur-sm;
+}

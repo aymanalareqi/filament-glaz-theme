@@ -1,0 +1,282 @@
+/* ===== CARDS & PANELS GLASSMORPHISM COMPONENTS ===== */
+
+/* Cards and Panels with Enhanced Glass */
+.fi-section,
+.fi-card,
+.fi-panel {
+    @apply backdrop-blur-xl border rounded-xl relative transition-all duration-300 ease-in-out;
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.fi-section:hover,
+.fi-card:hover,
+.fi-panel:hover {
+    @apply scale-101;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 16px 64px rgba(0, 0, 0, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+
+/* Card Content */
+.fi-section-content,
+.fi-card-content,
+.fi-panel-content {
+    @apply p-5 transition-all duration-200 ease-in-out;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+/* Card Footers */
+.fi-section-footer,
+.fi-card-footer,
+.fi-panel-footer {
+    @apply backdrop-blur-sm border-t px-5 py-3 transition-all duration-200 ease-in-out;
+    background: rgba(255, 255, 255, 0.08);
+    border-top-color: rgba(255, 255, 255, 0.15);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+/* Collapsible Sections */
+.fi-section.fi-collapsible {
+    @apply transition-all duration-300 ease-in-out;
+}
+
+.fi-section.fi-collapsed {
+    @apply scale-98 opacity-80;
+}
+
+.fi-section.fi-collapsed .fi-section-content {
+    @apply max-h-0 overflow-hidden pt-0 pb-0;
+}
+
+/* Section Toggle Button */
+.fi-section-toggle {
+    @apply backdrop-blur-sm border rounded-md px-2 py-1 transition-all duration-200 ease-in-out;
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.fi-section-toggle:hover {
+    @apply scale-105;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Tabs */
+.fi-tabs {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.fi-tabs-nav {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    padding: 4px;
+    gap: 2px;
+}
+
+.fi-tabs-tab {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 8px 16px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.fi-tabs-tab:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.fi-tabs-tab.fi-active {
+    background: rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.fi-tabs-content {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+/* Accordions */
+.fi-accordion {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.fi-accordion-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.2s ease;
+}
+
+.fi-accordion-item:last-child {
+    border-bottom: none;
+}
+
+.fi-accordion-header {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 16px 20px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.fi-accordion-header:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(4px);
+}
+
+.fi-accordion-content {
+    background: rgba(255, 255, 255, 0.02);
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.fi-accordion-item.fi-expanded .fi-accordion-content {
+    max-height: 1000px;
+    padding: 16px 20px;
+}
+
+.fi-accordion-item.fi-expanded .fi-accordion-header {
+    background: rgba(255, 255, 255, 0.15);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Info Cards */
+.fi-info-card {
+    background: rgba(59, 130, 246, 0.1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    border-radius: 10px;
+    padding: 16px;
+    transition: all 0.2s ease;
+}
+
+.fi-info-card:hover {
+    background: rgba(59, 130, 246, 0.15);
+    transform: scale(1.02);
+    box-shadow: 0 8px 32px rgba(59, 130, 246, 0.2);
+}
+
+/* Warning Cards */
+.fi-warning-card {
+    background: rgba(245, 158, 11, 0.1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(245, 158, 11, 0.3);
+    border-radius: 10px;
+    padding: 16px;
+    transition: all 0.2s ease;
+}
+
+.fi-warning-card:hover {
+    background: rgba(245, 158, 11, 0.15);
+    transform: scale(1.02);
+    box-shadow: 0 8px 32px rgba(245, 158, 11, 0.2);
+}
+
+/* Error Cards */
+.fi-error-card {
+    background: rgba(239, 68, 68, 0.1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    border-radius: 10px;
+    padding: 16px;
+    transition: all 0.2s ease;
+}
+
+.fi-error-card:hover {
+    background: rgba(239, 68, 68, 0.15);
+    transform: scale(1.02);
+    box-shadow: 0 8px 32px rgba(239, 68, 68, 0.2);
+}
+
+/* Success Cards */
+.fi-success-card {
+    background: rgba(34, 197, 94, 0.1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(34, 197, 94, 0.3);
+    border-radius: 10px;
+    padding: 16px;
+    transition: all 0.2s ease;
+}
+
+.fi-success-card:hover {
+    background: rgba(34, 197, 94, 0.15);
+    transform: scale(1.02);
+    box-shadow: 0 8px 32px rgba(34, 197, 94, 0.2);
+}
+
+/* Card Actions */
+.fi-card-actions {
+    display: flex;
+    gap: 8px;
+    padding: 12px 20px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Floating Cards */
+.fi-card.fi-floating {
+    position: relative;
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Card Overlays */
+.fi-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.fi-card:hover .fi-card-overlay {
+    opacity: 1;
+}

@@ -1,0 +1,11 @@
+.fi-pagination-items {
+    @apply ring-1 shadow-none border-gray-100 dark:border-gray-700/80 border hover:shadow-xl bg-white dark:bg-gray-700/90;
+
+    .fi-pagination-item {
+        &.fi-active .fi-pagination-item-btn {
+
+            @apply bg-gray-100 border-1 border-primary-50 dark:bg-gray-500/40 dark:dark:border-gray-400/40;
+
+        }
+    }
+}

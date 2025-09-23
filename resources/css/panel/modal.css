@@ -1,0 +1,65 @@
+.fi-modal {
+
+    &.fi-modal-slide-over,
+    &.fi-width-screen {
+
+        &>.fi-modal-window-ctn>.fi-modal-window {
+
+            & .fi-modal-content {
+                @apply backdrop-blur-sm bg-white/90 dark:bg-gray-900/60;
+
+            }
+        }
+    }
+
+    &>.fi-modal-close-overlay {
+        @apply backdrop-blur-xs bg-gray-900/50 dark:bg-gray-950/20;
+    }
+
+
+    &>.fi-modal-window-ctn>.fi-modal-window {
+        @apply bg-white/50 ring-gray-950/5 dark:bg-gray-900/90 dark:ring-white/10;
+        contain: layout;
+
+        & .fi-modal-header {
+
+            @apply border-b border-gray-300 pb-6 dark:border-white/20;
+
+            &.fi-sticky {
+                @apply border-gray-300 pb-6 dark:border-white/10;
+            }
+        }
+
+        & .fi-modal-heading {
+            @apply text-base leading-6 font-semibold text-gray-950 dark:text-white;
+        }
+
+        & .fi-modal-description {
+            @apply text-gray-500 dark:text-gray-400;
+        }
+
+        & .fi-modal-footer {
+
+            &.fi-sticky {
+                @apply border-gray-200 bg-white py-5 dark:border-white/10 dark:bg-gray-900;
+            }
+        }
+
+        & .fi-modal-icon-bg {
+            @apply bg-gray-100 dark:bg-gray-500/20;
+
+            &>.fi-icon {
+                @apply text-gray-500 dark:text-gray-400;
+            }
+
+            &.fi-color {
+                @apply bg-color-100 dark:bg-color-500/20;
+
+                &>.fi-icon {
+                    @apply text-color-600 dark:text-color-400;
+                }
+            }
+        }
+    }
+
+}

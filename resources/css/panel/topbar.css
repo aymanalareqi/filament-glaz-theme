@@ -1,0 +1,21 @@
+.fi-topbar {
+    @apply border-b border-white/20 transition-all duration-300 ease-in-out bg-white/10;
+
+    .fi-icon-btn {
+        .fi-icon {
+            @apply dark:text-gray-300 hover:dark:text-gray-100;
+        }
+    }
+
+}
+
+.fi-topbar::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
+    @apply backdrop-blur-sm;
+}
