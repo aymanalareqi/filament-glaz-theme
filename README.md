@@ -7,7 +7,7 @@
 
 A beautiful, modern Glaz theme for **Filament v4** admin panels featuring elegant light and dark modes with arctic-inspired design elements.
 
-![Dashboard Light and Dark](https://raw.githubusercontent.com/alareqi/filament-glaz-theme/main/docs/dashboard.jpg)
+![Dashboard Light and Dark](https://raw.githubusercontent.com/alareqi/filament-glaz-theme/main/docs/dashboard.png)
 
 ## ✨ Features
 
