@@ -43,12 +43,6 @@ This design approach creates interfaces that feel **modern**, **sophisticated**,
 - **Filament**: 4.0 or higher *(exclusively)*
 - **Node.js**: 18.0 or higher (for asset compilation)
 
-## Version Compatibility
-
-| Filament Version | Glaz Theme Version | Support Status |
-|:-----------------|:-------------------|:---------------|
-| **4.x**          | **2.x (Current)**  | ✅ **Actively Supported** |
-
 > **⚠️ Important**: This theme is designed **exclusively for Filament v4**. It will not work with Filament v3 or earlier versions. The glassmorphism effects and modern CSS features require Filament v4's updated architecture and styling system.
 
 ## Installation
@@ -209,6 +203,7 @@ The Glaz theme provides extensive customization options to tailor the glassmorph
 ### Overview
 
 The theme can be customized at multiple levels:
+
 - **CSS Variables**: Override default glassmorphism values
 - **Component Styles**: Customize individual UI components
 - **Color Schemes**: Integrate with your brand colors
@@ -224,6 +219,7 @@ php artisan vendor:publish --tag="filament-glaz-theme-assets"
 ```
 
 This creates the following structure in your project:
+
 ```
 resources/css/vendor/filament-glaz-theme/
 ├── theme.css              # Main theme file
@@ -596,7 +592,9 @@ You can also customize the glassmorphism effects differently for each panel:
 **Problem**: The glassmorphism effects are not visible after installation.
 
 **Solutions**:
+
 1. **Verify Vite Configuration**: Ensure the theme CSS is properly added to `vite.config.js`:
+
    ```js
    input: [
        'resources/css/app.css',
@@ -606,6 +604,7 @@ You can also customize the glassmorphism effects differently for each panel:
    ```
 
 2. **Build Assets**: Compile your assets:
+
    ```bash
    npm run build
    # or for development
@@ -613,6 +612,7 @@ You can also customize the glassmorphism effects differently for each panel:
    ```
 
 3. **Clear All Caches**:
+
    ```bash
    php artisan cache:clear
    php artisan view:clear
@@ -621,6 +621,7 @@ You can also customize the glassmorphism effects differently for each panel:
    ```
 
 4. **Verify Plugin Registration**: Check your panel provider:
+
    ```php
    ->plugin(FilamentGlazThemePlugin::make()) // Must be present
    ```
@@ -630,6 +631,7 @@ You can also customize the glassmorphism effects differently for each panel:
 **Problem**: Basic theme loads but glass effects (blur, transparency) are missing.
 
 **Solutions**:
+
 1. **Browser Support**: Ensure your browser supports `backdrop-filter`:
    - Chrome 76+, Firefox 103+, Safari 14+
    - Check: [Can I Use Backdrop Filter](https://caniuse.com/css-backdrop-filter)
@@ -639,6 +641,7 @@ You can also customize the glassmorphism effects differently for each panel:
    - Firefox: `about:config` → `layers.acceleration.force-enabled` → `true`
 
 3. **CSS Override Check**: Verify no other CSS is overriding glassmorphism:
+
    ```css
    /* Check if this fixes it temporarily */
    .fi-card {
@@ -652,7 +655,9 @@ You can also customize the glassmorphism effects differently for each panel:
 **Problem**: Glassmorphism effects cause lag or poor performance.
 
 **Solutions**:
+
 1. **Reduce Blur Intensity**: Lower backdrop-filter values:
+
    ```css
    .fi-card {
        backdrop-filter: blur(6px); /* Instead of blur(12px) */
@@ -660,6 +665,7 @@ You can also customize the glassmorphism effects differently for each panel:
    ```
 
 2. **Disable Effects on Mobile**:
+
    ```css
    @media (max-width: 768px) {
        .fi-card {
@@ -670,6 +676,7 @@ You can also customize the glassmorphism effects differently for each panel:
    ```
 
 3. **Use `will-change` for Animated Elements**:
+
    ```css
    .fi-card {
        will-change: transform, backdrop-filter;
@@ -681,12 +688,15 @@ You can also customize the glassmorphism effects differently for each panel:
 **Problem**: Glassmorphism effects look wrong in dark mode.
 
 **Solutions**:
+
 1. **Check Filament Dark Mode**: Ensure dark mode is properly configured:
+
    ```php
    $panel->darkMode() // Enable dark mode support
    ```
 
 2. **Verify Dark Mode CSS**: Check if dark mode styles are loading:
+
    ```css
    .dark .fi-card {
        background: rgba(255, 255, 255, 0.1); /* Light glass on dark */
@@ -703,7 +713,9 @@ You can also customize the glassmorphism effects differently for each panel:
 **Problem**: Custom styles interfere with glassmorphism effects.
 
 **Solutions**:
+
 1. **CSS Specificity**: Use more specific selectors:
+
    ```css
    /* Instead of */
    .fi-card { background: red; }
@@ -713,6 +725,7 @@ You can also customize the glassmorphism effects differently for each panel:
    ```
 
 2. **Load Order**: Ensure theme CSS loads after custom CSS:
+
    ```js
    input: [
        'resources/css/app.css',           // Your styles first
@@ -722,6 +735,7 @@ You can also customize the glassmorphism effects differently for each panel:
    ```
 
 3. **Use CSS Layers** (modern approach):
+
    ```css
    @layer base, theme, custom;
 
@@ -739,18 +753,22 @@ You can also customize the glassmorphism effects differently for each panel:
 **Problem**: Changes to theme files don't appear after modification.
 
 **Solutions**:
+
 1. **Force Rebuild**:
+
    ```bash
    rm -rf node_modules/.vite
    npm run build
    ```
 
 2. **Development Mode**: Use dev mode for real-time changes:
+
    ```bash
    npm run dev
    ```
 
 3. **Check File Paths**: Verify published files exist:
+
    ```bash
    ls -la resources/css/vendor/filament-glaz-theme/
    ```
