@@ -23,7 +23,7 @@
 
 .fi-sidebar-item:hover a,
 .fi-sidebar-item.fi-active a {
-    @apply bg-gradient-to-l from-white to-white/10 dark:from-gray-700 dark:to-gray-600/0;
+    @apply bg-gradient-to-l rtl:bg-gradient-to-r from-white to-white/10 dark:from-gray-700 dark:to-gray-600/0;
 }
 
 .fi-sidebar-item-icon {

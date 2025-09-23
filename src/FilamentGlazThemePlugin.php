@@ -21,6 +21,7 @@ class FilamentGlazThemePlugin implements Plugin
     public function register(Panel $panel): void
     {
         $panel
+            ->font('tajawal')
             ->viteTheme('vendor/alareqi/filament-glaz-theme/resources/css/theme.css');
     }
 
