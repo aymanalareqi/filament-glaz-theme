@@ -7,7 +7,7 @@
 
 A beautiful, modern Glaz theme for **Filament v4** admin panels featuring elegant light and dark modes with arctic-inspired design elements.
 
-![Dashboard Light and Dark](https://raw.githubusercontent.com/alareqi/filament-glaz-theme/main/docs/dashboard.png)
+![Dashboard Light and Dark](https://raw.githubusercontent.com/aymanalareqi/filament-glaz-theme/main/docs/dashboard.png)
 
 ## ✨ Features
 
@@ -282,10 +282,10 @@ The Glaz theme provides a beautiful, consistent design across all Filament compo
   <tbody>
     <tr>
       <td>
-        <img src="https://raw.githubusercontent.com/alareqi/filament-glaz-theme/main/docs/dashboard_light.png" width="100%" alt="Glaz Theme Dashboard Light Mode">
+        <img src="https://raw.githubusercontent.com/aymanalareqi/filament-glaz-theme/main/docs/dashboard_light.png" width="100%" alt="Glaz Theme Dashboard Light Mode">
       </td>
       <td>
-        <img src="https://raw.githubusercontent.com/alareqi/filament-glaz-theme/main/docs/dashboard_dark.png" width="100%" alt="Glaz Theme Dashboard Dark Mode">
+        <img src="https://raw.githubusercontent.com/aymanalareqi/filament-glaz-theme/main/docs/dashboard_dark.png" width="100%" alt="Glaz Theme Dashboard Dark Mode">
       </td>
     </tr>
   </tbody>
@@ -303,10 +303,10 @@ The Glaz theme provides a beautiful, consistent design across all Filament compo
   <tbody>
     <tr>
       <td>
-        <img src="https://raw.githubusercontent.com/alareqi/filament-glaz-theme/main/docs/user_menu_light.png" width="100%" alt="Glaz Theme User Menu Light Mode">
+        <img src="https://raw.githubusercontent.com/aymanalareqi/filament-glaz-theme/main/docs/user_menu_light.png" width="100%" alt="Glaz Theme User Menu Light Mode">
       </td>
       <td>
-        <img src="https://raw.githubusercontent.com/alareqi/filament-glaz-theme/main/docs/user_menu_dark.png" width="100%" alt="Glaz Theme User Menu Dark Mode">
+        <img src="https://raw.githubusercontent.com/aymanalareqi/filament-glaz-theme/main/docs/user_menu_dark.png" width="100%" alt="Glaz Theme User Menu Dark Mode">
       </td>
     </tr>
   </tbody>
@@ -324,10 +324,10 @@ The Glaz theme provides a beautiful, consistent design across all Filament compo
   <tbody>
     <tr>
       <td>
-        <img src="https://raw.githubusercontent.com/alareqi/filament-glaz-theme/main/docs/product_create_light.png" width="100%" alt="Glaz Theme Create Product Light Mode">
+        <img src="https://raw.githubusercontent.com/aymanalareqi/filament-glaz-theme/main/docs/product_create_light.png" width="100%" alt="Glaz Theme Create Product Light Mode">
       </td>
       <td>
-        <img src="https://raw.githubusercontent.com/alareqi/filament-glaz-theme/main/docs/product_create_dark.png" width="100%" alt="Glaz Theme Create Product Dark Mode">
+        <img src="https://raw.githubusercontent.com/aymanalareqi/filament-glaz-theme/main/docs/product_create_dark.png" width="100%" alt="Glaz Theme Create Product Dark Mode">
       </td>
     </tr>
   </tbody>
@@ -347,16 +347,16 @@ The Glaz theme provides a beautiful, consistent design across all Filament compo
   <tbody>
     <tr>
       <td>
-        <img src="https://raw.githubusercontent.com/alareqi/filament-glaz-theme/main/docs/orders_light.png" width="100%" alt="Glaz Theme Order List Light Mode">
+        <img src="https://raw.githubusercontent.com/aymanalareqi/filament-glaz-theme/main/docs/orders_light.png" width="100%" alt="Glaz Theme Order List Light Mode">
       </td>
       <td>
-        <img src="https://raw.githubusercontent.com/alareqi/filament-glaz-theme/main/docs/orders_dark.png" width="100%" alt="Glaz Theme Order List Dark Mode">
+        <img src="https://raw.githubusercontent.com/aymanalareqi/filament-glaz-theme/main/docs/orders_dark.png" width="100%" alt="Glaz Theme Order List Dark Mode">
       </td>
       <td>
-        <img src="https://raw.githubusercontent.com/alareqi/filament-glaz-theme/main/docs/order_create_light.png" width="100%" alt="Glaz Theme Create Order Light Mode">
+        <img src="https://raw.githubusercontent.com/aymanalareqi/filament-glaz-theme/main/docs/order_create_light.png" width="100%" alt="Glaz Theme Create Order Light Mode">
       </td>
       <td>
-        <img src="https://raw.githubusercontent.com/alareqi/filament-glaz-theme/main/docs/order_create_dark.png" width="100%" alt="Glaz Theme Create Order Dark Mode">
+        <img src="https://raw.githubusercontent.com/aymanalareqi/filament-glaz-theme/main/docs/order_create_dark.png" width="100%" alt="Glaz Theme Create Order Dark Mode">
       </td>
     </tr>
   </tbody>
